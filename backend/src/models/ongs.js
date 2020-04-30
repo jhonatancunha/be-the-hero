@@ -10,6 +10,5 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  Ongs.associate = (models) => {};
   return Ongs;
 };

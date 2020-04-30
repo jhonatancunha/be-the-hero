@@ -7,6 +7,8 @@ export default {
   async index(req, res) {
     const { page = 1 } = req.query;
 
+    const { count } = await Incident.findAndCountAll();
+
     const incidents = await Incident.findAll({
       attributes: ['id', 'title', 'description', 'value', 'ong_id'],
       include: [
@@ -19,8 +21,11 @@ export default {
       offset: (page - 1) * 5,
     });
 
+    res.header('X-Total-Count', count);
+
     return res.json(incidents);
   },
+
   async store(req, res) {
     try {
       const { auth } = req.headers;
@@ -44,5 +49,23 @@ export default {
     } catch (err) {
       return res.json(err);
     }
+  },
+
+  async delete(req, res) {
+    const idOng = req.headers.auth;
+
+    const checkOng = await Ong.findByPk(idOng);
+
+    if (!checkOng) return res.status(401).json('Invalid Ong ID.');
+
+    const idIncident = req.params.id;
+
+    const incidents = await Incident.destroy({
+      where: { id: idIncident },
+    });
+
+    if (!incidents) return res.status(401).json('Invalid incident id.');
+
+    return res.status(200).send();
   },
 };

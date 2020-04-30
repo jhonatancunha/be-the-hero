@@ -8,5 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
+  Incident.associate = (models) => {};
+
   return Incident;
 };
