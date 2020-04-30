@@ -1,4 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
+  // TEST
   const Ongs = sequelize.define(
     'Ong',
     {

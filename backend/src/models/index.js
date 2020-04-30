@@ -22,7 +22,7 @@ if (config.use_env_variable) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-// // MODELS
+// // MODELS IMPORTATION
 db.Ong = require('./ongs')(sequelize, Sequelize);
 db.Incident = require('./incident')(sequelize, Sequelize);
 

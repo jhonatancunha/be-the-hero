@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
+  // RELATIONS
   Incident.associate = (models) => {
     Incident.belongsTo(models.Ong, {
       foreignKey: 'ong_id',
