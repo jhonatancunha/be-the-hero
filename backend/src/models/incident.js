@@ -8,7 +8,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  Incident.associate = (models) => {};
+  Incident.associate = (models) => {
+    Incident.belongsTo(models.Ong, {
+      foreignKey: 'ong_id',
+    });
+  };
 
   return Incident;
 };

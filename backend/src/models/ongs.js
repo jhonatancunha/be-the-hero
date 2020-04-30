@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Ongs = sequelize.define(
-    'Ongs',
+    'Ong',
     {
       name: DataTypes.STRING,
       email: DataTypes.STRING,
