@@ -8,10 +8,5 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  Incident.associate = (models) => {
-    Incident.belongsTo(models.Ongs, {
-      foreignkey: 'user_id',
-    });
-  };
   return Incident;
 };

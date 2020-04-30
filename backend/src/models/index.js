@@ -19,28 +19,16 @@ if (config.use_env_variable) {
   );
 }
 
-fs.readdirSync(__dirname)
-  .filter((file) => {
-    return (
-      file.indexOf('.') !== 0 && file !== basename && file.slice(-3) === '.js'
-    );
-  })
-  .forEach((file) => {
-    const model = sequelize.import(path.join(__dirname, file));
-    db[model.name] = model;
-  });
-
-Object.keys(db).forEach((modelName) => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 // MODELS
 db.Ong = require('./ongs')(sequelize, Sequelize);
 db.Incident = require('./incident')(sequelize, Sequelize);
+
+// RELACIONAMENTOS
+db.Incident.belongsTo(db.Ong, {
+  foreignKey: 'ong_id',
+});
 
 module.exports = db;
