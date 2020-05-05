@@ -4,9 +4,9 @@ const { Ong } = model;
 
 export default {
   async store(req, res) {
-    const { name, email, whatsapp, city, uf } = await Ong.create(req.body);
+    const {id, name, email, whatsapp, city, uf } = await Ong.create(req.body);
 
-    return res.json({ name, email, whatsapp, city, uf });
+    return res.json({id, name, email, whatsapp, city, uf });
   },
 
   async index(req, res) {
