@@ -44,7 +44,7 @@ $ cd frontend
 $ yarn start
 ```
 
-> Abra outro terminal na mesma pasta e rode
+> Em outro terminal execute os seguintes comandos:
 
 ```bash
 $ cd backend
