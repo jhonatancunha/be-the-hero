@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "bb4b3756-304d-46b0-9af8-10820c9a9a58",
+		"name": "ONGS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jhonatan\",\n\t\"email\": \"jhonatanteste@hotmail.com\",\n\t\"whatsapp\": \"teste-number\",\n\t\"city\": \"Cianorte\",\n\t\"uf\": \"PR\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/ongs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ongs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Ongs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/ongs?page=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ongs"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "a15850d9-c884-46eb-b9fa-9080e739b4b2",
+		"name": "Incident",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth",
+						"value": "7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"5 cachorro\",\n\t\"description\": \"NEW VERSION!\",\n\t\"value\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/incidents",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/incidents?page=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incidents"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Incident",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/incidents/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incidents",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
