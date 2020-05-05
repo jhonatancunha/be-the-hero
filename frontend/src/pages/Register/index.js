@@ -14,7 +14,7 @@ export default function Register() {
   const [city, setCity] = useState('');
   const [uf, setUf] = useState('');
 
-  //FAZENDO CONEXÃO BACK
+  //FAZENDO CONEXÃO BACK+FRONT
   async function handleRegister(event) {
     event.preventDefault();
 
