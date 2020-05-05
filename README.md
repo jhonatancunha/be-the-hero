@@ -51,3 +51,10 @@ $ cd backend
 $ yarn sequelize db:migrate
 $ yarn dev
 ```
+
+## 📺 Imagens
+
+<h1 align="justify">
+    <img alt="" title="" src="preview/index-web.png">
+    <img alt="" title="" src="preview/profile-web.png">
+</h1>
