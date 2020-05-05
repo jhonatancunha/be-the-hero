@@ -4,6 +4,16 @@
 
 <h2 align="center">Seja um herói, apoie ONG's em suas causas!</h2>
 
+## 🚀 Tecnologias
+
+- [Node.js]
+- [Express]
+- [Sequelize]
+- [ReactJS]
+- [React Native]
+- [Expo]
+
+
 ## Recursos
 * A ONG poderá fazer login via ID.
 * A ONG poderá cadastrar os casos.
