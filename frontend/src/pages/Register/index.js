@@ -1,11 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import logoImg from '../../assets/logo.svg';
 
+import api from '../../services/api';
+
 import './style.css';
 export default function Register() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [whatsapp, setWhatasapp] = useState('');
+  const [city, setCity] = useState('');
+  const [uf, setUf] = useState('');
+
+  //FAZENDO CONEXÃO BACK
+  async function handleRegister(event) {
+    event.preventDefault();
+
+    const data = {
+      name,
+      email,
+      whatsapp,
+      city,
+      uf,
+    };
+
+    try {
+      const result = await api.post('/ongs', data);
+      alert('CADASTRO OK');
+    } catch (err) {
+      alert('ERRO TENTE NOVAMENTE!');
+    }
+  }
+
   return (
     <div className="register-container">
       <div className="content">
@@ -23,13 +51,36 @@ export default function Register() {
           </Link>
         </section>
 
-        <form>
-          <input placeholder="Nome ONG" />
-          <input placeholder="E-Mail" type="email" />
-          <input placeholder="WhatsApp" />
+        <form onSubmit={handleRegister}>
+          <input
+            placeholder="Nome ONG"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            placeholder="E-Mail"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            placeholder="WhatsApp"
+            value={whatsapp}
+            onChange={(e) => setWhatasapp(e.target.value)}
+          />
           <div className="input-group">
-            <input placeholder="Cidade" />
-            <input placeholder="UF" maxLength="2" style={{ width: 80 }} />
+            <input
+              placeholder="Cidade"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+            <input
+              placeholder="UF"
+              maxLength="2"
+              style={{ width: 80 }}
+              value={uf}
+              onChange={(e) => setUf(e.target.value)}
+            />
           </div>
 
           <button className="button" type="submit">
