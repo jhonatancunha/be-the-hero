@@ -52,19 +52,14 @@ $ yarn sequelize db:migrate
 $ yarn dev
 ```
 
-### 📺 Imagens
-
 ## 💻 Web View
 
 <h1 align="justify">
-    <img alt="" title="" src="preview/index-web.png">
-    <img alt="" title="" src="preview/profile-web.png">
+    <img alt="" title="" src="preview/web.png">
 </h1>
 
 ## 📱 Mobile View
 
 <h1 align="justify">
-    <img alt="" title="" src="preview/index-mobile.jpg">
-    <img alt="" title="" src="preview/profile-mobile.jpg">
-    <img alt="" title="" src="preview/caso-mobile.jpg">
+    <img alt="" title="" src="preview/mobile.png">
 </h1>
