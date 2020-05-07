@@ -14,7 +14,7 @@
 - [Expo]
 
 
-## Recursos
+## 🔧 Recursos
 * A ONG poderá fazer login via ID.
 * A ONG poderá cadastrar os casos.
 * A ONG poderá disponibilizar o seu e-mail ou whatsapp para contato.
