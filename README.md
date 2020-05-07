@@ -64,6 +64,8 @@ $ yarn dev
     <img alt="" title="" src="preview/mobile.png">
 </h1>
 
+<br>
+
 <p align="center">
 Criado com :coffee: por Jhonatan Cunha.
 </p>
