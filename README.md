@@ -21,7 +21,7 @@
 * O Usuário poderá ver os casos na versão mobile.
 * O Usuário poderá entrar em contato com a ONG.
 
-## 🚀 Como utilizar?
+## ❓ Como utilizar?
 
 ### Instalação
 
