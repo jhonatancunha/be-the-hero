@@ -63,3 +63,8 @@ $ yarn dev
 <h1 align="justify">
     <img alt="" title="" src="preview/mobile.png">
 </h1>
+
+<p align="center">
+Criado com :coffee: por Jhonatan Cunha.
+</p>
+
